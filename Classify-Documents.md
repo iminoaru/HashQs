@@ -41,8 +41,11 @@ Output: [[0, 1], [2], [3]]
 
 ## Constraints:
 The number of documents will be between 1 and 10.
+
 Each document will contain between 1 and 5 words.
+
 Words in a document are separated by single spaces.
+
 Words consist of lowercase English letters and have a maximum length of 30 characters.
 
 
@@ -93,7 +96,7 @@ def classifyDocuments(documents):
     return list(freq_map.values())
 
 
-documents = ["data structures d algorithms", "algorithms and data structures", "machine learning", "learning machine"]
+documents = ["data structures and algorithms", "algorithms and data structures", "machine learning", "learning machine"]
 print(classifyDocuments(documents))  
 
 ```
@@ -135,7 +138,7 @@ vector<vector<int>> classifyDocuments(vector<string>& documents) {
 }
 
 int main() {
-    vector<string> documents = {"data structures  algorithms", "algorithms and data structures", "machine learning", "learning machine"};
+    vector<string> documents = {"data structures and algorithms", "algorithms and data structures", "machine learning", "learning machine"};
     vector<vector<int>> result = classifyDocuments(documents);
     for (const auto& group : result) {
         for (int index : group) {
