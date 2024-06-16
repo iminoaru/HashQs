@@ -15,33 +15,37 @@ You can assume that the long URLs are unique and the short codes should be uniqu
 ## Testcases:
 ### Test Case 1:
 
-Input: longURL = "[https://www.google.com](https://www.google.com)" 
+Input: longURL = "https://app.100xdevs.com" 
 
 Output: "shortURL/abc123"
 
 ### Test Case 2:
 
-Input: longURL = "[https://www.amazon.com](https://www.amazon.com)" 
+Input: longURL = "https://gaud.vercel.app" 
 
 Output: "shortURL/xyz456"
 
 ### Test Case 3:
 
-Input: longURL = "[https://www.facebook.com](https://www.facebook.com)" 
+Input: longURL = "https://www.facebook.com" 
 
 Output: "shortURL/def789"
 
 ### Test Case 4:
 
-Input: longURL = "[https://www.apple.com](https://www.apple.com)" 
+Input: longURL = "https://www.apple.com" 
 
 Output: "shortURL/ghi456"
 
 ### Test Case 5:
 
-Input: longURL = "[https://www.microsoft.com](https://www.microsoft.com)" 
+Input: longURL = "https://www.microsoft.com" 
 
 Output: "shortURL/jkl012"
+
+
+#### NOTE:
+URL will differ on every run as its random.
 
 ## Constraints:
 
