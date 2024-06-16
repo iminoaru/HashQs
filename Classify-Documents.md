@@ -9,31 +9,31 @@ Each sublist should contain the indices of the documents that have the same word
 Return the List of Lists in any order.
 
 ## Testcases:
-Test Case 1:
+### Test Case 1:
 
 Input: documents = ["data structures and algorithms", "algorithms and data structures", "machine learning", "learning machine"]
 
 Output: [[0, 1], [2, 3]]
 
-Test Case 2:
+### Test Case 2:
 
 Input: documents = ["the quick brown fox", "quick the brown fox", "lazy dog", "dog lazy", "jumped over the lazy dog"]
 
 Output: [[0, 1], [2, 3], [4]]
 
-Test Case 3:
+### Test Case 3:
 
 Input: documents = ["one two three", "four five six", "seven eight nine", "one two three"]
 
 Output: [[0, 3], [1], [2]]
 
-Test Case 4:
+### Test Case 4:
 
 Input: documents = ["hello world", "world hello", "hello", "world"]
 
 Output: [[0, 1], [2], [3]]
 
-Test Case 5:
+### Test Case 5:
 
 Input: documents = ["a b c", "c b a", "a a b b", "a b"]
 
