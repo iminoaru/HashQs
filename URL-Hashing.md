@@ -61,7 +61,6 @@ import java.util.*;
 public class URLShortener {
     private static Map<String, String> urlToShortCodeMap = new HashMap<>();
     private static Map<String, String> shortCodeToUrlMap = new HashMap<>();
-    private static int counter = 0;
 
     public static String shortenURL(String longURL) {
         String shortCode = "shortURL/" + generateShortCode();
@@ -75,11 +74,17 @@ public class URLShortener {
     }
 
     private static String generateShortCode() {
-        return Integer.toString(counter++);
+        String characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder(6);
+        for (int i = 0; i < 6; i++) {
+            sb.append(characters.charAt(random.nextInt(characters.length())));
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args) {
-        String longURL = "https://www.google.com";
+        String longURL = "https://app.100xdevs.com";
         String shortCode = shortenURL(longURL);
         System.out.println(shortCode);
         System.out.println(retrieveURL(shortCode));
@@ -139,7 +144,7 @@ private:
     string alphabet;
 
 public:
-    URLShortener() : counter(0), alphabet("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789") {}
+    URLShortener() : counter(0), alphabet("abcdefghijklmnopqrstuvwxyz0123456789") {}
 
     string shortenURL(string longURL) {
         string shortCode = "shortURL/" + generateShortCode();
@@ -164,7 +169,7 @@ private:
 
 int main() {
     URLShortener shortener;
-    string longURL = "https://www.google.com";
+    string longURL = "https://app.100xdevs.com";
     string shortCode = shortener.shortenURL(longURL);
     cout << shortCode << endl;
     cout << shortener.retrieveURL(shortCode) << endl;
